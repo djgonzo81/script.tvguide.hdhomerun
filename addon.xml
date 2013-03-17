@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.tvguide.hdhomerun"
+    name="TV Guide HDHomerun Service" version="0.1.0" provider-name="gunjandatta">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py" start="login">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">An extension to the tv guide addon for HD Homerun devices.</summary>
+    <description lang="en">Using the mc2xml executable, it will keep your guide data up to date for the tv guide addon.</description>
+    <platform>all</platform>
+  </extension>
+</addon>

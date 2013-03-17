@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+	<category id="general" label="30001">
+    <setting id="pnp_address" type="folder" source="video" label="30100" default="" />
+    <setting id="update_interval" type="slider" label="30101" default="4" option="int" range="2,24" />
+    <setting id="last_run_time" type="text" default="" label="30102" visible="false" />
+	</category>
+  <category id="mc2xml" label="30002">
+    <setting id="path_to_mc2xml" type="file" label="30200" default="" />
+    <setting id="mc2xml_parameters" type="text" label="30201" default="-d 24" />
+  </category>
+</settings>

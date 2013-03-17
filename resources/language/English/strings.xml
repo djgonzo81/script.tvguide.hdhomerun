@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">TV Guide - HD HomeRun Add-On</string>
+    <string id="30001">General</string>
+    <string id="30002">MC2XML Settings</string>
+
+    <!-- general settings -->
+    <string id="30100">HD HomeRun UPnP Folder</string>
+    <string id="30101">Update Interval (hours)</string>
+    <string id="30102">Last Run Time</string>
+
+    <!-- mc2xml settings -->
+    <string id="30200">Path to mc2xml Executable</string>
+    <string id="30201">Optional Parameters for mc2xml</string>
+</strings>
