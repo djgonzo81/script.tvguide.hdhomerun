@@ -4,6 +4,21 @@ import update
 import utils
 import xbmc
 
+def init():
+    # Get the path to the mc2xml executable
+    pathToExecutable = utils.getSetting('path_to_mc2xml')
+    if(not utils.isNullOrEmpty(pathToExecutable)):
+        # Set the xmltv output path
+        xmltvPath = os.path.join(path, "xmltv.xml")
+
+        # See if the file does not exist
+        if(not os.path.isfile(xmltvPath)):
+            # Log
+            utils.log("[Init] The tv guide information hasn't been set. Clearing the last run time to ensure it runs at startup.")
+
+            # Clear the last run time
+            utils.setSetting("last_run_time", "")
+
 def startService():
     # Log
     utils.log("Main loop execution started.")
