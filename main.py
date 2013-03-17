@@ -1,4 +1,5 @@
 import datetime as dt
+import os
 import time
 import update
 import utils
@@ -9,7 +10,7 @@ def init():
     pathToExecutable = utils.getSetting('path_to_mc2xml')
     if(not utils.isNullOrEmpty(pathToExecutable)):
         # Set the xmltv output path
-        xmltvPath = os.path.join(path, "xmltv.xml")
+        xmltvPath = os.path.join(pathToExecutable, "xmltv.xml")
 
         # See if the file does not exist
         if(not os.path.isfile(xmltvPath)):
