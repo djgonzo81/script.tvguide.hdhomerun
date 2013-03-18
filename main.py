@@ -55,7 +55,6 @@ def startService():
             update.UpdateGuideInformation()
 
             # Update the settings
-            utils.log("Updating the TV Guide Information")
             utils.setSetting("last_run_time", utils.convertDateToString(dt.datetime.now()))
 
         # Sleep
