@@ -82,13 +82,18 @@ def GetTvGuideInformationFile():
 
     # Run the mc2xml command
     utils.log('[Get Tv Guide Information File] Executing the mc2xml method: ' +  pathToExecutable + ' ' + mc2xmlParameters)
-    subprocess.Popen([pathToExecutable, mc2xmlParameters], stdout = subprocess.PIPE)
+    startupinfo = None
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess._subprocess.STARTF_USESHOWWINDOW
+    proc = subprocess.Popen([pathToExecutable, mc2xmlParameters], startupinfo = startupinfo)
+    proc.wait()
     utils.log('[Get Tv Guide Information File] The mc2xml execution completed.')
 
     # Ensure the xmltv.xml output file exists
     if(not os.path.isfile(xmltvPath)):
         # Log
-        utils.log("[Get Tv Guide Information File] The xmltv.xml output file does not exist.")
+        utils.log("[Get Tv Guide Information File] The xmltv.xml output file does not exist: " + xmltvPath)
         return None
 
     return xmltvPath
